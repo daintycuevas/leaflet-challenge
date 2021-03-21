@@ -62,11 +62,13 @@ function createMap(earthquakes) {
   };
 
   // Create the map object with options
-  var map = L.map("mapid", {
+  var map = L.map("map", {
     center: [37.0902, 95.7129],
     zoom: 5,
     layers: [light, dark, earthquakes]
   });
+
+  map.invalidateSize();
 
   // Create a layer control, 
   // Pass in the baseMaps and overlayMaps 
